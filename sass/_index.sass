@@ -1,0 +1,119 @@
+.secret
+  padding: 50px 0
+  >p
+    font-size: 20px
+    color: $color-text
+    line-height: 2rem
+    padding-bottom: 30px
+  ul
+    justify-content: space-around
+  li
+    max-width: 260px
+    flex: 1 1
+    margin: 25px
+    h3
+      font-size: 18px
+      color: $color-text
+      padding-top: 20px
+    p
+      color: $color-text
+      padding-top: 11px
+      line-height: 20px
+      width: 100%
+.chef
+  background: $color-text
+  justify-content: center
+  color: $color-bg
+  width: 100%
+  img
+    object-fit: cover
+    object-position: center right
+    height: 460px
+    padding-left: 1%
+    width: 49%
+  .aboutChef
+    padding: 20px
+    h3
+      font-size: 20px
+      line-height: 2rem
+    p
+      padding-top: 16px
+      line-height: 1.4em
+.impression
+  padding: 50px 32px
+  color: $color-text
+  h3
+    padding-top: 20px
+  .impItem
+    padding: 32px 10px 0
+    .impText
+      padding-left: 13px
+      h4
+        font-size: 18px
+        padding: 22px 0
+      p
+        line-height: 24px
+        &:nth-last-child(1)
+          padding-top: 1rem
+.booking
+  padding: 50px 32px
+  background: #FAFAFA
+  color: $color-text
+  h3
+    padding-bottom: 38px
+    line-height: 2rem
+  .bookItem
+    padding: 10px
+    img
+      width: 100%
+  label
+    padding: 6px 0
+  input
+    margin: 6px 0 17px
+    padding: 5px 14px
+    width: 100%
+    border: 1px solid #CCCCCC
+    outline: none
+    &[type="radio"]
+      width: 20px
+  .formbtn
+    margin-top: 25px
+    a
+      padding: 10px 20px
+      border-radius: 5px
+      color: #fff
+    .reset
+      background: rgba(0,0 , 0, 0.3)
+      border: 1px solid transparent
+      transition: all 0.5s
+      &:hover
+        color: rgba(0,0 , 0, 0.3)
+        background: transparent
+        border: 1px solid rgba(0,0 , 0, 0.3)
+    .submit
+      background: #F56C23
+      border: 1px solid transparent
+      transition: all 0.5s
+      &:hover
+        color: #F56C23
+        background: transparent
+        border: 1px solid #F56C23
+@media ( max-width: 768px )
+  .impression
+    padding: 50px 1%
+  .booking
+    padding: 50px 1%
+@media ( max-width: 650px )
+  .chef
+    flex-wrap: wrap
+    img
+      width: 100%
+      margin-left: 0
+    .aboutChef
+      width: 90%
+  .impression>div
+    flex-wrap: wrap
+  .booking>div
+    flex-wrap: wrap
+    .bookItem
+      width: 100%

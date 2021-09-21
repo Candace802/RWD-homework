@@ -1,0 +1,203 @@
+.contentCart
+  padding: 48px 32px 0
+  color: $color-text
+  .cartMenu
+    width: 30%
+    padding: 0 10px
+    line-height: 32px
+    h3
+      padding-bottom: 16px
+      span
+        font-size: 26px
+        padding-right: 10px
+    .menuList
+      a
+        display: block
+        color: $color-text
+        border-bottom: 1px solid $color-text
+        padding-left: 10px
+        &:hover
+          background: $color-text
+          color: #fff
+      .active
+        background: $color-text
+        color: #fff
+  .cartProduce
+    width: 70%
+    .search
+      margin: 0 10px
+      justify-content: space-between
+      .searchBtn
+        width: 66%
+        input
+          width: 100%
+          padding: 5px
+          font-size: 18px
+          border-radius: 5px 0 0 5px
+          border-right: none
+          outline: none
+        .boxSearch
+          border-radius: 0 5px 5px 0
+          background: $color-text
+          background-image: url('../images/order/search.png')
+          background-size: 20px
+          background-repeat: no-repeat
+          background-position: center
+          padding: 7px 9px
+          width: 36px
+      .searchPay
+        width: 34%
+        text-align: end
+        .pay
+          color: $color-text
+          &:hover
+            color: $color-login
+        span
+          padding: 0 17px 0 12px
+        .fa-shopping-cart
+          font-size: 24px
+          color: $color-text
+          position: relative
+          padding-right: 10px
+          &:after
+            content: "0"
+            position: absolute
+            top: -10px
+            right: 0px
+            color: #fff
+            background: $color-login
+            padding: 6px
+            font-size: 10px
+            line-height: 6px
+            border-radius: 50%
+            border: 1px solid $color-bg
+          &:hover
+            color: $color-login
+    .hamburgMenu
+      li
+        width: 30.55555%
+        margin: 26px 1.38889% 0
+        position: relative
+        box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16)
+        .hamPhoto
+          width: 100%
+          height: 120px
+          margin-bottom: 11px
+        .ham-img1
+          background: url('../images/order/product_1.png')
+          background-size: cover
+          background-repeat: no-repeat
+        .ham-img2
+          background: url('../images/order/product_2.png')
+          background-size: cover
+          background-repeat: no-repeat
+        .ham-img3
+          background: url('../images/order/product_3.png')
+          background-size: cover
+          background-repeat: no-repeat
+        .ham-img4
+          background: url('../images/order/product_4.png')
+          background-size: cover
+          background-repeat: no-repeat
+        .hotfood
+          &:before
+            content: ""
+            z-index: -1
+            overflow: hidden
+            transform: rotate(-135deg)
+            display: block
+            background: #00CC99
+            box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1)
+            position: absolute
+            top: 34px
+            right: -16px
+            clip-path: polygon(120px 20px, 90px -10px, 30px -10px, 0px 20px, 10px 30px, 110px 30px)
+            height: 20px
+            width: 120px
+          &:after
+            content: "熱銷美食"
+            z-index: 1
+            overflow: hidden
+            font-size: 14px
+            font-weight: bold
+            color: #FFF
+            text-transform: uppercase
+            text-align: center
+            line-height: 20px
+            transform: rotate(45deg)
+            width: 120px
+            display: block
+            background: #00CC99
+            box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1)
+            position: absolute
+            top: 20px
+            right: -30px
+            clip-path: polygon(120px 20px, 90px -10px, 30px -10px, 0px 20px, 10px 30px, 110px 30px)
+        .fa-heart
+          position: absolute
+          top: 10px
+          left: 10px
+          color: #fff
+        span
+          font-size: 12px
+          padding-bottom: 8px
+        span:before
+          content: ""
+          width: 91px
+          height: 1px
+          background: $color-text
+          position: absolute
+          left: 50%
+          bottom: 88px
+          transform: translate(-50%, -50%)
+        h5
+          padding: 28px 0 3px
+      .addCart
+        display: block
+        margin: 10px
+        padding: 4px
+        border: 2px solid $color-login
+        border-radius: 3px
+        color: $color-login
+        &:hover
+          border: 2px solid $color-text
+          color: $color-text
+        span
+          font-size: 16px
+        .fa-shopping-cart
+          font-size: 14px
+          padding-right: 9px
+
+@media ( max-width: 1000px)
+  .contentCart
+    .cartProduce
+      .hamburgMenu
+        li
+          width: 47.22222%
+          margin: 26px 1.38889% 0
+          position: relative
+
+@media ( max-width: 767px)
+  .contentCart
+    flex-direction: column
+    padding: 48px 0 0
+    .cartMenu
+      width: 100%
+      padding-bottom: 23px
+    .cartProduce
+      width: 100%
+@media ( max-width: 500px)
+  .contentCart
+    .cartProduce
+      .search
+        flex-wrap: wrap
+        .searchBtn
+          width: 100%
+        .searchPay
+          width: 100%
+          margin-top: 20px
+      .hamburgMenu
+        li
+          width: 100%
+          margin: 26px 10px 0
+          position: relative

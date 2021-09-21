@@ -1,0 +1,153 @@
+*
+  box-sizing: border-box
+  text-decoration: none
+  scroll-behavior: smooth
+
+body
+  font-family: "Microsoft JhengHei","微軟正黑體",arial,sans-serif
+
+.topup
+  position: fixed
+  bottom: 20px
+  right: 20px
+.wrap
+  max-width: 1024px
+  margin: 0 auto
+  background: $color-bg
+  .banner
+    height: 420px
+    background-image: url("../images/header_desktop@2x.png")
+    background-size: cover
+    background-position: center center
+  nav
+    justify-content: space-between
+    background: rgba(0,0 , 0, 0.35)
+    padding: 10px 20px
+    top: 0
+    right: 0
+    left: 0
+    h1
+      @include imgtext
+      background-image: url("../images/logo/logo_w(null).svg")
+      background-size: cover
+      width: 122px
+      height: 24px
+    .menu
+      a
+        color: #fff
+        display: block
+        padding: 10px
+        border-bottom: 3px solid transparent
+        transition: all 0.5s
+        &:hover
+          border-bottom: 3px solid $color-orange
+  .copywriting
+    background: rgba(0,0 , 0, 0.35)
+    color: #fff
+    padding: 10px
+    @include divcenter
+    h2
+      font-size: 2rem
+      line-height: 3rem
+      margin-bottom: 1rem
+    p
+      line-height: 1.5rem
+.menu-show .wrap header nav .menu
+  height: 338px
+@media ( max-width: 500px )
+  .wrap
+    header
+      nav
+        .menu
+          flex-direction: column
+          position: absolute
+          top: 82px
+          background: #000
+          right: 0
+          left: 0
+          z-index: 10
+          height: 0
+          overflow: hidden
+          text-align: center
+          justify-content: center
+          transition: all 1s
+          a
+            padding: 20px 0
+            border: 0
+            &:hover
+              border: 0
+              color: $color-orange
+        .menushow
+          display: block
+@media ( max-width: 767px )
+  .wrap
+    header
+      nav
+      .copywriting
+        width: 90%
+        .writing-1
+          display: none
+        .writing-2
+          display: block
+
+footer
+  padding: 50px 32px
+  justify-content: space-around
+  div
+    width: 33.3333%
+    margin: 0 10px
+  h3
+    font-size: 26px
+    margin-bottom: 20px
+    color: $color-text
+  ul
+    padding-left: 20px
+  p,li
+    line-height: 1.4em
+    list-style-type: disc
+    color: $color-text
+  img
+    width: 45px
+    padding-right: 10px
+  .bottom-logo
+    width: 250px
+    padding-bottom: 20px
+@media ( max-width: 767px )
+  footer
+    flex-direction: column
+    div
+      width: 100%
+      margin-bottom: 2rem
+    .footer-right
+      align-self: flex-end
+// -----------------------
+.ham
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+  transition: transform 500ms
+  -moz-user-select: none
+  -webkit-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.hamRotate.active
+  transform: rotate(45deg)
+
+.line
+  fill: none
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+  stroke: #fff
+  stroke-width: 3
+  stroke-linecap: round
+
+.ham1 .top
+  stroke-dasharray: 40 139
+
+.ham1 .bottom
+  stroke-dasharray: 40 180
+
+.ham1.active .top
+  stroke-dashoffset: -98px
+
+.ham1.active .bottom
+  stroke-dashoffset: -138px
